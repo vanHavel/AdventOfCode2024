@@ -17,9 +17,9 @@
 (defn all-indices
   ([grid] (all-indices grid (infer-dim grid)))
   ([grid dim] (if (zero? dim)
-                '(())
-                (apply concat (for [i (range(count grid))]
-                  (map #(cons i %) (all-indices (nth grid i) (dec dim))))))))
+                [[]]
+                (into [] (apply concat (for [i (range(count grid))]
+                  (map #(into [i] %) (all-indices (nth grid i) (dec dim)))))))))
 
 (defn get [grid ix]
   (get-in grid ix))
@@ -30,7 +30,9 @@
 (defn find [grid value]
   (filter #(= value (get grid %)) (all-indices grid)))
 
-(defn move [pos vect] (vec (map + pos vect)))
+(defn move [pos vec] (into [] (map + pos vec)))
+(defn invert [pos] (into [] (map - pos)))
+(defn diff [p q] (move p (invert q)))
 
 (defn from-string [s]
   (let [lines (str/split-lines s)]
