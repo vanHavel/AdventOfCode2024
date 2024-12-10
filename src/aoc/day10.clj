@@ -11,7 +11,7 @@
                            (into [])))))
 
 (defn -main []
-  (let [grid (grid/fmap (grid/from-string (slurp "input/day10.txt")) #(parse-long (str %)))
+  (let [grid (grid/fmap #(parse-long (str %)) (grid/from-string (slurp "input/day10.txt")))
         trailheadss (map #(trailheads grid %) (grid/find grid 0))]
     (println (reduce + (map count trailheadss)))
     (println (reduce + (map #(count (set %)) trailheadss)))))

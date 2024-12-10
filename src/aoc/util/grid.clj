@@ -50,7 +50,7 @@
 
 (defn adjust [grid ix val] (assoc-in grid ix val))
 
-(defn fmap ([grid f] (fmap grid f (infer-dim grid)))
-  ([grid f dim](if (zero? dim)
+(defn fmap ([f grid] (fmap f grid (infer-dim grid)))
+  ([f grid dim](if (zero? dim)
                  (f grid)
-                 (into [] (map #(fmap % f (dec dim)) grid)))))
+                 (into [] (map #(fmap f % (dec dim)) grid)))))
