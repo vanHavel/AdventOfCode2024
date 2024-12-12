@@ -45,8 +45,10 @@
     :right :down
     :down :left
     :left :up))
+(defn turn-around [dir] (nth (iterate turn-right dir) 2))
 (defn turn-left [dir] (nth (iterate turn-right dir) 3))
 (defn neighbors [grid pos] (filter #(in-bounds grid %) (map #(move pos %) (vals dir2))))
+(defn movedir [pos dir] (move pos (dir dir2)))
 
 (defn adjust [grid ix val] (assoc-in grid ix val))
 
