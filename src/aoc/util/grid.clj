@@ -39,6 +39,12 @@
     (vec (map vec lines))))
 
 (def dir2 {:up [-1 0] :down [1 0] :left [0 -1] :right [0 1]})
+(defn dir-from-char [c]
+  (case c
+    \> :right
+    \< :left
+    \^ :up
+    \v :down))
 (defn turn-right [dir]
   (case dir
     :up :right
