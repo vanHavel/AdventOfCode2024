@@ -17,11 +17,21 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Leiningen: aysylu/loom:1.0.2" level="project" />
+    <orderEntry type="library" name="Leiningen: com.google.javascript/closure-compiler:v20151015" level="project" />
     <orderEntry type="library" name="Leiningen: nrepl:1.0.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/clojure:1.11.1" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/clojurescript:1.7.170" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/core.match:1.1.0" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/core.specs.alpha:0.2.62" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/data.json:0.2.6" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/data.priority-map:0.0.5" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/google-closure-library-third-party:0.0-20151016-61277aea" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/google-closure-library:0.0-20151016-61277aea" level="project" />
     <orderEntry type="library" name="Leiningen: org.clojure/spec.alpha:0.3.218" level="project" />
+    <orderEntry type="library" name="Leiningen: org.clojure/tools.reader:0.10.0-alpha3" level="project" />
+    <orderEntry type="library" name="Leiningen: org.mozilla/rhino:1.7R5" level="project" />
     <orderEntry type="library" name="Leiningen: org.nrepl/incomplete:0.1.0" level="project" />
+    <orderEntry type="library" name="Leiningen: tailrecursion/cljs-priority-map:1.2.1" level="project" />
   </component>
 </module>
