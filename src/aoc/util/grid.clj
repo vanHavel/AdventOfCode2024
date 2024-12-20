@@ -33,6 +33,7 @@
 (defn move [pos vec] (into [] (map + pos vec)))
 (defn invert [pos] (into [] (map - pos)))
 (defn diff [p q] (move p (invert q)))
+(defn manhattan [p q] (reduce + (map abs (diff p q))))
 
 (defn from-string [s]
   (let [lines (str/split-lines s)]
